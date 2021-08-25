@@ -18,13 +18,17 @@ const forecast = (latitude, longitude, callback) => {
     } else {
       const temperature = body.current.temperature;
       const feelslike = body.current.feelslike;
+      const humidity = body.current.humidity;
       const today =
         body.current.weather_descriptions[0] +
         ". It is currently " +
         temperature +
         " degrees out. It feels like " +
         feelslike +
-        " degrees out.";
+        " degrees out." +
+        "Humidity " +
+        humidity;
+
       callback(undefined, today);
     }
   });

@@ -29,7 +29,7 @@ app.get("/help", (req, res) => {
   res.render("help", {
     title: "Help",
     message: "Help message",
-    name: "Emily",
+    name: "Alice",
   });
 });
 
@@ -69,7 +69,7 @@ app.get("*", (req, res) => {
   res.render("404", {
     title: "404",
     errorMessage: "Page not found",
-    name: "Emily",
+    name: "Alice",
   });
 });
 
